@@ -653,3 +653,70 @@ a {
         display: none;
     }
 }
+
+
+/* Mobile view improvements and alignment fixes */
+.hero-feature-item, 
+.trust-item, 
+.top-info span, 
+.contact-item, 
+.card-item, 
+.top-bar-flex,
+.header-container,
+.top-bar-flex a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.hero-feature-item i,
+.trust-pill i,
+.trust-item i,
+.top-info i,
+.contact-item i,
+.card-item i,
+.service-icon i {
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.trust-pill {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+}
+
+/* Ensure images don't overflow on small mobile devices and look premium */
+.hero-image-media, 
+.why-us-media, 
+.about-image-media,
+.about-img-container img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 260px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+}
+
+/* Mobile responsive padding and alignment checks */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px !important;
+    }
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    .hero-actions {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    .hero-actions .btn {
+        width: 100% !important;
+    }
+}
