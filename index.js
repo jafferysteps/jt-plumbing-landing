@@ -117,4 +117,29 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+
+    // Reviews Carousel Rotation
+    const reviews = document.querySelectorAll(".review-card");
+    const dots = document.querySelectorAll(".carousel-dots .dot");
+    let currentIndex = 0;
+
+    function showReview(index) {
+        if (reviews.length === 0) return;
+        reviews.forEach(r => r.classList.remove("active"));
+        dots.forEach(d => d.classList.remove("active"));
+        if (reviews[index]) reviews[index].classList.add("active");
+        if (dots[index]) dots[index].classList.add("active");
+
+        const carousel = document.getElementById("reviews-carousel");
+        if (carousel) {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+    }
+
+    dots.forEach(dot => {
+        dot.addEventListener("click", () => {
+            currentIndex = parseInt(dot.dataset.index);
+            showReview(currentIndex);
+        });
+    });
 });
