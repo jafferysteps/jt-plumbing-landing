@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("toggle-pitch-btn");
     if (toggleBtn) {
         let isPitchView = false;
-        // Initialize button text for customer view
         toggleBtn.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles"></i> Switch to Pitch View';
         
         toggleBtn.addEventListener("click", () => {
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (mobileToggle && desktopNav) {
         mobileToggle.addEventListener("click", () => {
             desktopNav.classList.toggle("active");
-            // Change icon
             const icon = mobileToggle.querySelector("i");
             if (desktopNav.classList.contains("active")) {
                 icon.className = "fa-solid fa-xmark";
@@ -35,7 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
         
-        desktopNav.querySelectorAll("a").forEach(link => {
+        // Close menu drawer when clicking standard links
+        desktopNav.querySelectorAll("a:not(.dropdown-trigger)").forEach(link => {
             link.addEventListener("click", () => {
                 desktopNav.classList.remove("active");
                 const icon = mobileToggle.querySelector("i");
@@ -43,6 +42,18 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // Collapsible navigation dropdowns on mobile viewport
+    const dropdownTriggers = document.querySelectorAll(".dropdown-trigger");
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener("click", (e) => {
+            if (window.innerWidth <= 992) {
+                e.preventDefault(); // prevent navigation
+                const parent = trigger.parentElement;
+                parent.classList.toggle("open");
+            }
+        });
+    });
 
     // Dynamic Pricing Estimate Calculator using Select Dropdowns
     const selectFields = document.querySelectorAll(".calc-select-field");
@@ -90,28 +101,20 @@ document.addEventListener("DOMContentLoaded", () => {
         select.addEventListener("change", updateCalculator);
     });
 
-    // Reviews Carousel Rotation
-    const reviews = document.querySelectorAll(".review-card");
-    const dots = document.querySelectorAll(".dot");
-    let currentIndex = 0;
+    // FAQ Accordion Toggle
+    const faqQuestions = document.querySelectorAll(".faq-question");
 
-    function showReview(index) {
-        if (reviews.length === 0) return;
-        reviews.forEach(r => r.classList.remove("active"));
-        dots.forEach(d => d.classList.remove("active"));
-        if (reviews[index]) reviews[index].classList.add("active");
-        if (dots[index]) dots[index].classList.add("active");
+    faqQuestions.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const faqItem = btn.parentElement;
+            faqItem.classList.toggle("active");
 
-        const carousel = document.getElementById("reviews-carousel");
-        if (carousel) {
-            carousel.style.transform = `translateX(-${index * 100}%)`;
-        }
-    }
-
-    dots.forEach(dot => {
-        dot.addEventListener("click", () => {
-            currentIndex = parseInt(dot.dataset.index);
-            showReview(currentIndex);
+            // Close other items
+            document.querySelectorAll(".faq-item").forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove("active");
+                }
+            });
         });
     });
 });
