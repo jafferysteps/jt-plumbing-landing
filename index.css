@@ -355,7 +355,7 @@ a {
     background-color: var(--dark-bg);
     color: white;
     padding: 80px 0;
-    background-image: linear-gradient(rgba(11, 19, 41, 0.85), rgba(11, 19, 41, 0.95)), url('assets/bathroom.png');
+    background-image: linear-gradient(rgba(11, 19, 41, 0.85), rgba(11, 19, 41, 0.95)), url('assets/modern_home.png');
     background-size: cover;
     background-position: center;
 }
@@ -961,7 +961,7 @@ section {
         padding: 50px 0;
     }
 
-    .hero-grid, .guarantees-grid, .process-grid, .services-grid, .calc-grid, .why-us-grid, .footer-grid {
+    .hero-grid, .guarantees-grid, .process-grid, .services-grid, .calc-grid, .why-us-grid, .footer-grid, .media-grid {
         grid-template-columns: 1fr !important;
         gap: 30px;
     }
@@ -1094,5 +1094,58 @@ section {
 
 .faq-question i {
     transition: transform 0.3s ease;
+}
+
+/* Workmanship Media CTA Section */
+.media-cta-section {
+    padding: 80px 0;
+    background-color: var(--light-surface);
+    border-top: 1px solid var(--border-color);
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.realistic-img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.media-content-box h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.media-content-box p {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+}
+
+.bullet-list-bold {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.b-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.b-item i {
+    color: var(--accent-color);
 }
 
