@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome & Bootstrap Icons -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
@@ -29,18 +29,21 @@
     <!-- Top Announcement Bar -->
     <div class="top-announcement-bar">
         <div class="container top-bar-flex">
-            <span class="emergency-tag"><i class="fa-solid fa-location-dot"></i> 3016 Del Monte Blvd, Marina, CA 93933</span>
+            <span class="location-tag"><i class="fa-solid fa-location-dot"></i> 3016 Del Monte Blvd, Marina, CA 93933</span>
             <div class="header-phone">
-                <span>Call Now:</span>
-                <a href="tel:8316320139" class="phone-link"><i class="fa-solid fa-phone"></i> (831) 632-0139</a>
+                <span>Emergency Dispatch:</span>
+                <a href="tel:8316320139" class="phone-link"><i class="fa-solid fa-phone-volume"></i> (831) 632-0139</a>
             </div>
         </div>
     </div>
 
-    <!-- Main Navigation Header with Mobile Dropdowns -->
+    <!-- Main Navigation Header -->
     <header class="main-header">
         <div class="container header-flex">
             <div class="logo-area">
+                <div class="logo-circle">
+                    <i class="fa-solid fa-faucet-drip"></i>
+                </div>
                 <div class="logo-text">
                     <span class="logo-text-primary">JT PLUMBING</span>
                     <span class="logo-text-secondary">PLUMBING & HEATING INC.</span>
@@ -54,7 +57,7 @@
             <nav class="desktop-nav">
                 <!-- Dropdown 1: Plumbing -->
                 <div class="nav-dropdown">
-                    <a href="#services" class="dropdown-trigger">Plumbing Services <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="#services" class="dropdown-trigger">Plumbing <i class="fa-solid fa-chevron-down"></i></a>
                     <div class="dropdown-menu">
                         <a href="#services"><i class="fa-solid fa-droplet"></i> Drain Clearing</a>
                         <a href="#services"><i class="fa-solid fa-wrench"></i> Pipe Repair</a>
@@ -64,7 +67,7 @@
                 
                 <!-- Dropdown 2: Heating -->
                 <div class="nav-dropdown">
-                    <a href="#services" class="dropdown-trigger">Heating Maintenance <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="#services" class="dropdown-trigger">Heating <i class="fa-solid fa-chevron-down"></i></a>
                     <div class="dropdown-menu">
                         <a href="#services"><i class="fa-solid fa-fire"></i> Furnace Diagnostics</a>
                         <a href="#services"><i class="fa-solid fa-temperature-high"></i> Heating Tune-ups</a>
@@ -72,8 +75,8 @@
                 </div>
 
                 <a href="#guarantees">Guarantees</a>
-                <a href="#calculator">Cost Estimator</a>
-                <a href="#about">Why Choose Us</a>
+                <a href="#calculator">Instant Estimate</a>
+                <a href="#about">Why Us</a>
             </nav>
 
             <div class="header-cta">
@@ -89,7 +92,6 @@
             <div class="hero-info">
                 <span class="hero-pretitle">Serving Monterey Bay & Salinas Valley</span>
                 <h1>Monterey's Premium Plumbing & Heating Specialist</h1>
-                <h2 class="hero-slogan">We Get It Done Right!</h2>
                 <p class="hero-text-body">Professional residential repairs, commercial installations, and complete heating system diagnostics. Licensed contractors delivering top-tier code compliance and honest pricing.</p>
                 
                 <div class="hero-checklists">
@@ -100,6 +102,7 @@
 
                 <div class="hero-actions">
                     <a href="tel:8316320139" class="btn btn-primary btn-lg"><i class="fa-solid fa-phone"></i> Call (831) 632-0139</a>
+                    <a href="#calculator" class="btn btn-outline btn-lg">Estimate Plumbing Cost <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -117,7 +120,7 @@
                     <div class="form-group-row">
                         <div class="form-group">
                             <label for="form-phone">Phone *</label>
-                            <input type="tel" id="form-phone" name="Client Phone" required class="form-control" placeholder="(831) 555-0199">
+                            <input type="tel" id="form-phone" name="Client Phone" required class="form-control" placeholder="(831) 632-0139">
                         </div>
                         <div class="form-group">
                             <label for="form-zip">Zip Code *</label>
@@ -130,7 +133,7 @@
                             <option value="">-- Select Service Category --</option>
                             <option value="plumbing">Plumbing / Drain Snaking</option>
                             <option value="waterheater">Water Heater Repair/Install</option>
-                            <option value="heating">Heating system Diagnostics</option>
+                            <option value="heating">Heating System Diagnostics</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-secondary btn-block">Book Appointment Priority</button>
@@ -140,68 +143,58 @@
     </section>
 
     <!-- Guarantees Section -->
-    <section class="coupons-section" id="guarantees">
+    <section class="guarantees-section" id="guarantees">
         <div class="container">
             <div class="section-title-wrapper text-center">
+                <span class="section-subtitle">Guaranteed Quality</span>
                 <h2>Our Guarantees & Trust Protection</h2>
-                <p>We stand behind our plumbing and heating services with premium protection plans.</p>
+                <p class="section-desc">We stand behind our plumbing and heating services with premium protection plans.</p>
             </div>
 
-            <div class="coupons-grid">
+            <div class="guarantees-grid">
                 <!-- Card 1 -->
-                <div class="coupon-card">
-                    <div class="coupon-inner">
-                        <div class="coupon-header">
-                            <span class="discount-value" style="font-size: 1.8rem; color: var(--accent-orange);"><i class="fa-solid fa-shield-halved"></i> Service Guarantee</span>
-                        </div>
-                        <h3>100% Satisfaction</h3>
-                        <p>If you are not completely satisfied with our service, we will resolve the issue to your standards or refund your investment.</p>
-                    </div>
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>100% Satisfaction</h3>
+                    <p>If you are not completely satisfied with our service, we will resolve the issue to your standards or refund your investment.</p>
                 </div>
                 <!-- Card 2 -->
-                <div class="coupon-card coupon-highlight">
-                    <div class="coupon-inner">
-                        <div class="coupon-header">
-                            <span class="discount-value" style="font-size: 1.8rem; color: var(--accent-orange);"><i class="fa-solid fa-award"></i> 1-Year Warranty</span>
-                        </div>
-                        <h3>Workmanship Covered</h3>
-                        <p>All plumbing, water heater, and heating repairs are backed by a full 1-year warranty on materials and workmanship.</p>
-                    </div>
+                <div class="guarantee-card card-highlight">
+                    <div class="guarantee-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>1-Year Warranty</h3>
+                    <p>All plumbing, water heater, and heating repairs are backed by a full 1-year warranty on materials and workmanship.</p>
                 </div>
                 <!-- Card 3 -->
-                <div class="coupon-card">
-                    <div class="coupon-inner">
-                        <div class="coupon-header">
-                            <span class="discount-value" style="font-size: 1.8rem; color: var(--accent-orange);"><i class="fa-solid fa-file-invoice-dollar"></i> Upfront Pricing</span>
-                        </div>
-                        <h3>No Hidden Surcharges</h3>
-                        <p>We diagnose your problem and provide a transparent, upfront pricing quote before any repair work begins.</p>
-                    </div>
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <h3>Upfront Pricing</h3>
+                    <p>We diagnose your problem and provide a transparent, upfront pricing quote before any repair work begins.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 3-Step Service Process Section -->
-    <section class="process-section" style="padding: 60px 0; background-color: white;">
+    <section class="process-section" id="process">
         <div class="container">
-            <div class="section-title-wrapper text-center" style="margin-bottom: 40px;">
+            <div class="section-title-wrapper text-center">
+                <span class="section-subtitle">How We Work</span>
                 <h2>Our 3-Step Service Process</h2>
-                <p>Getting your home comfort systems fixed is fast and straightforward.</p>
+                <p class="section-desc">Getting your home comfort systems fixed is fast and straightforward.</p>
             </div>
-            <div class="coupons-grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px;">
-                <div class="service-card" style="border-bottom: 4px solid var(--accent-orange); text-align: center;">
-                    <div class="service-icon-circle" style="background-color: var(--accent-orange); margin: 0 auto 20px;"><i class="fa-solid fa-calendar-check"></i></div>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-icon-circle"><i class="fa-solid fa-calendar-check"></i></div>
                     <h3>1. Request Service</h3>
                     <p>Submit your details online using our estimator or call our 24/7 priority booking line.</p>
                 </div>
-                <div class="service-card" style="border-bottom: 4px solid var(--primary-blue); text-align: center;">
-                    <div class="service-icon-circle" style="background-color: var(--primary-blue); margin: 0 auto 20px;"><i class="fa-solid fa-truck-fast"></i></div>
+                <div class="process-card">
+                    <div class="process-icon-circle"><i class="fa-solid fa-truck-fast"></i></div>
                     <h3>2. Professional Dispatch</h3>
                     <p>A licensed, background-checked technician is sent to your home in a fully stocked truck.</p>
                 </div>
-                <div class="service-card" style="border-bottom: 4px solid var(--accent-orange); text-align: center;">
-                    <div class="service-icon-circle" style="background-color: var(--accent-orange); margin: 0 auto 20px;"><i class="fa-solid fa-house-chimney-user"></i></div>
+                <div class="process-card">
+                    <div class="process-icon-circle"><i class="fa-solid fa-house-chimney-user"></i></div>
                     <h3>3. Diagnostics & Repair</h3>
                     <p>We diagnose the issue, provide upfront transparent pricing, and fix it on the spot.</p>
                 </div>
@@ -213,8 +206,9 @@
     <section class="services-section" id="services">
         <div class="container">
             <div class="section-title-wrapper text-center">
+                <span class="section-subtitle">What We Do</span>
                 <h2>Our Premium Services</h2>
-                <p>Highly qualified, state-licensed experts available for diagnostics and installation calls.</p>
+                <p class="section-desc">Highly qualified, state-licensed experts available for diagnostics and installation calls.</p>
             </div>
 
             <div class="services-grid">
@@ -265,8 +259,9 @@
     <section class="calculator-section" id="calculator">
         <div class="container">
             <div class="section-title-wrapper text-center">
+                <span class="section-subtitle">Price Check</span>
                 <h2>Get an Instant Service Estimate</h2>
-                <p>Select the baseline services you need to estimate your diagnostics and repair range.</p>
+                <p class="section-desc">Select the baseline services you need to estimate your diagnostics and repair range.</p>
             </div>
 
             <div class="calculator-card">
@@ -333,18 +328,18 @@
     <section id="about" class="why-us-section">
         <div class="container why-us-grid">
             <div class="why-us-info">
-                <span class="sub-title">Monterey Local Choice</span>
+                <span class="section-subtitle">Marina Local Choice</span>
                 <h2>Reliable Local Service Built On Quality</h2>
                 <p>At JT Plumbing, we specialize in residential and commercial plumbing repairs. We make sure all local codes are met, and we provide clean, compliant work you can rely on.</p>
                 
                 <div class="trust-pill-list">
-                    <div class="trust-pill-new" style="margin-bottom: 20px;">
-                        <h4 style="display: flex; align-items: center; gap: 8px; font-size: 1.15rem; color: var(--primary-blue); margin-bottom: 6px;"><i class="fa-solid fa-user-shield" style="color: var(--accent-orange); font-size: 1.25rem;"></i> Licensed & Compliant</h4>
-                        <p style="margin-left: 28px; font-size: 0.9rem; color: var(--text-muted);">Fully licensed contractors ensuring safe installations.</p>
+                    <div class="trust-pill-new">
+                        <h4><i class="fa-solid fa-user-shield"></i> Licensed & Compliant</h4>
+                        <p>Fully licensed contractors ensuring safe installations and code compliance.</p>
                     </div>
-                    <div class="trust-pill-new" style="margin-bottom: 20px;">
-                        <h4 style="display: flex; align-items: center; gap: 8px; font-size: 1.15rem; color: var(--primary-blue); margin-bottom: 6px;"><i class="fa-solid fa-thumbs-up" style="color: var(--accent-orange); font-size: 1.25rem;"></i> Top Customer Satisfaction</h4>
-                        <p style="margin-left: 28px; font-size: 0.9rem; color: var(--text-muted);">Reliable communication, direct updates, and clean work spaces.</p>
+                    <div class="trust-pill-new">
+                        <h4><i class="fa-solid fa-thumbs-up"></i> Top Customer Satisfaction</h4>
+                        <p>Reliable communication, direct updates, and clean work spaces left behind.</p>
                     </div>
                 </div>
             </div>
@@ -368,8 +363,8 @@
     <footer class="main-footer">
         <div class="container footer-grid">
             <div>
-                <h3>JT Plumbing Marina</h3>
-                <p style="margin-bottom: 15px;">Your trusted local HVAC, plumbing, and heating service provider since 1996.</p>
+                <h3>JT Plumbing</h3>
+                <p style="margin-bottom: 20px;">Your trusted local HVAC, plumbing, and heating service provider since 1996.</p>
                 <div class="footer-socials">
                     <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
@@ -379,13 +374,13 @@
             </div>
             <div>
                 <h4>Contact Us</h4>
-                <p>3016 Del Monte Blvd, Marina, CA 93933</p>
-                <p>Emergency Line: (831) 632-0139</p>
-                <p>Email: jtplumbing@yahoo.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> 3016 Del Monte Blvd, Marina, CA 93933</p>
+                <p><i class="fa-solid fa-phone"></i> Emergency Line: (831) 632-0139</p>
+                <p><i class="fa-solid fa-envelope"></i> Email: jtplumbing@yahoo.com</p>
             </div>
             <div>
                 <h4>Our Services</h4>
-                <p>General Plumbing & Drain snaking</p>
+                <p>General Plumbing & Drain Snaking</p>
                 <p>Water Heater Installation</p>
                 <p>Furnace Diagnostics & Tune-ups</p>
             </div>
