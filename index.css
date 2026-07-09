@@ -1149,3 +1149,135 @@ section {
     color: var(--accent-color);
 }
 
+/* Calculator Guide and Badges styling */
+.calc-guide-box {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px dashed var(--border-color);
+}
+
+.calc-guide-box h4 {
+    font-size: 1.05rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.calc-steps {
+    margin-left: 20px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.calc-steps li::marker {
+    color: var(--accent-color);
+    font-weight: 800;
+}
+
+.calc-badges {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.badge-item {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    background-color: var(--secondary-color);
+    padding: 6px 14px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(2, 132, 199, 0.1);
+}
+
+.badge-item i {
+    color: var(--primary-color);
+}
+
+/* Reviews Carousel Styles */
+.reviews-section {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+.reviews-container {
+    max-width: 700px;
+    margin: 40px auto 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.reviews-slider {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-card {
+    min-width: 100%;
+    background-color: var(--light-surface);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    box-sizing: border-box;
+}
+
+.review-stars {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.review-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.review-author {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-author strong {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--primary-color);
+}
+
+.review-author span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.carousel-dots .dot.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
