@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Pitch Toggle Control
     const toggleBtn = document.getElementById("toggle-pitch-btn");
     if (toggleBtn) {
-        let isPitchView = true;
+        let isPitchView = false;
+        // Initialize button text for customer view
+        toggleBtn.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles"></i> Switch to Pitch View';
+        
         toggleBtn.addEventListener("click", () => {
             isPitchView = !isPitchView;
             if (isPitchView) {
