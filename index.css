@@ -1220,6 +1220,7 @@ section {
 }
 
 .review-card {
+    flex: 0 0 100%;
     min-width: 100%;
     background-color: var(--light-surface);
     border: 1px solid var(--border-color);
