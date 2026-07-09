@@ -1279,7 +1279,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 90px;
+    height: 90px;
+    box-sizing: border-box;
     transition: var(--transition);
 }
 
