@@ -3,213 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JT Plumbing & Heating | Marina, Monterey & Salinas, CA | Residential & Commercial Plumbers</title>
-    <meta name="description" content="JT Plumbing (Jafet Torres Plumb Heat Inc.) is Marina's premier choice for expert plumbing, drain clearing, water heaters, and heating systems. Call (831) 632-0139.">
+    <title>JT Plumbing & Heating | Marina, Monterey & Salinas, CA</title>
+    <meta name="description" content="JT Plumbing (Jafet Torres Plumb Heat Inc.) is Monterey's premier choice for expert plumbing, drain clearing, water heaters, and heating systems. Call (831) 632-0139.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for icons -->
+    <!-- FontAwesome & Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <!-- Pitch Mode Banner -->
+    <!-- Pitch Mode Toggle Bar -->
     <div id="pitch-banner" class="pitch-banner">
         <div class="pitch-container">
             <span class="pitch-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Pitch Mode</span>
-            <p class="pitch-text">Previewing custom landing page for <strong>JT Plumbing (Marina, CA)</strong>. Click to toggle user vs customer view.</p>
+            <p class="pitch-text">Previewing custom landing page for <strong>JT Plumbing (Marina, CA)</strong>.</p>
             <button id="toggle-pitch-btn" class="pitch-toggle-btn">
                 <i class="fa-solid fa-eye"></i> Switch to Customer View
             </button>
         </div>
     </div>
 
-    <!-- Top Info Bar -->
-    <div class="top-bar">
+    <!-- Top Announcement Bar -->
+    <div class="top-announcement-bar">
         <div class="container top-bar-flex">
-            <div class="top-info">
-                <span><i class="fa-solid fa-location-dot"></i> 3016 Del Monte Blvd, Marina, CA 93933</span>
-                <span class="separator">|</span>
-                <span><i class="fa-solid fa-envelope"></i> jtplumbing@yahoo.com</span>
-            </div>
-            <div class="top-phone">
-                <a href="tel:8316320139" class="phone-link"><i class="fa-solid fa-phone-volume animate-bounce"></i> (831) 632-0139</a>
+            <span class="emergency-tag"><i class="fa-solid fa-location-dot"></i> 3016 Del Monte Blvd, Marina, CA 93933</span>
+            <div class="header-phone">
+                <span>Call Now:</span>
+                <a href="tel:8316320139" class="phone-link"><i class="fa-solid fa-phone"></i> (831) 632-0139</a>
             </div>
         </div>
     </div>
 
-    <!-- Main Navigation Header -->
+    <!-- Main Navigation Header with Mobile Dropdowns -->
     <header class="main-header">
         <div class="container header-flex">
             <div class="logo-area">
-                <div class="logo-circle">
-                    <i class="fa-solid fa-faucet-drip"></i>
-                </div>
                 <div class="logo-text">
-                    <span class="brand-name">JT Plumbing</span>
-                    <span class="brand-sub">PLUMBING & HEATING INC.</span>
+                    <span class="logo-text-primary">JT PLUMBING</span>
+                    <span class="logo-text-secondary">PLUMBING & HEATING INC.</span>
                 </div>
             </div>
+            
+            <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
             <nav class="desktop-nav">
-                <a href="#services">Services</a>
-                <a href="#estimator">Cost Estimator</a>
-                <a href="#about">Why Us</a>
-                <a href="#reviews">Reviews</a>
+                <!-- Dropdown 1: Plumbing -->
+                <div class="nav-dropdown">
+                    <a href="#services" class="dropdown-trigger">Plumbing Services <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#services"><i class="fa-solid fa-droplet"></i> Drain Clearing</a>
+                        <a href="#services"><i class="fa-solid fa-wrench"></i> Pipe Repair</a>
+                        <a href="#services"><i class="fa-solid fa-temperature-arrow-up"></i> Water Heaters</a>
+                    </div>
+                </div>
+                
+                <!-- Dropdown 2: Heating -->
+                <div class="nav-dropdown">
+                    <a href="#services" class="dropdown-trigger">Heating Maintenance <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#services"><i class="fa-solid fa-fire"></i> Furnace Diagnostics</a>
+                        <a href="#services"><i class="fa-solid fa-temperature-high"></i> Heating Tune-ups</a>
+                    </div>
+                </div>
+
+                <a href="#guarantees">Guarantees</a>
+                <a href="#calculator">Cost Estimator</a>
+                <a href="#about">Why Choose Us</a>
             </nav>
+
             <div class="header-cta">
-                <a href="#estimator" class="btn btn-primary btn-pulse">Get Instant Quote</a>
+                <a href="#booking-form-anchor" class="btn btn-secondary">Schedule Online</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-overlay"></div>
         <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="badge-trusted">
-                    <i class="fa-solid fa-shield-halved"></i> Serving Monterey Bay & Salinas Valley
-                </div>
-                <h1>Monterey's Premium Plumbing & Heating Specialist<br><span class="highlight-text">Flowing Smoothly.</span></h1>
-                <p class="hero-description">Professional residential repairs, commercial installations, and complete heating system diagnostics. Licensed contractors delivering top-tier code compliance and honest pricing.</p>
+            <div class="hero-info">
+                <span class="hero-pretitle">Serving Monterey Bay & Salinas Valley</span>
+                <h1>Monterey's Premium Plumbing & Heating Specialist</h1>
+                <h2 class="hero-slogan">We Get It Done Right!</h2>
+                <p class="hero-text-body">Professional residential repairs, commercial installations, and complete heating system diagnostics. Licensed contractors delivering top-tier code compliance and honest pricing.</p>
                 
-                <div class="hero-features">
-                    <div class="hero-feature-item">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Licensed & Bonded</span>
-                    </div>
-                    <div class="hero-feature-item">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Heating & Air Experts</span>
-                    </div>
-                    <div class="hero-feature-item">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Local Marina Owned</span>
-                    </div>
+                <div class="hero-checklists">
+                    <div class="chk-item"><i class="fa-solid fa-circle-check"></i> 100% Satisfaction Guarantee</div>
+                    <div class="chk-item"><i class="fa-solid fa-circle-check"></i> Licensed & Bonded (Marina Owned)</div>
+                    <div class="chk-item"><i class="fa-solid fa-circle-check"></i> Upfront Transparent Estimates</div>
                 </div>
 
                 <div class="hero-actions">
-                    <a href="#estimator" class="btn btn-primary btn-lg">Estimate Plumbing Cost <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="tel:8316320139" class="btn btn-outline btn-lg"><i class="fa-solid fa-phone"></i> Call (831) 632-0139</a>
+                    <a href="tel:8316320139" class="btn btn-primary btn-lg"><i class="fa-solid fa-phone"></i> Call (831) 632-0139</a>
                 </div>
             </div>
 
-            <!-- Pitch Callout Tooltip -->
-            <div class="hero-image-container">
-                <div class="pitch-tooltip hero-pitch-tooltip" data-pitch-only="true">
-                    <div class="pitch-tooltip-header">
-                        <i class="fa-solid fa-circle-info"></i> Psychological Conversion Value
+            <!-- Hero Form Block -->
+            <div class="hero-form-wrapper" id="booking-form-anchor">
+                <h3>Schedule Service Online</h3>
+                <p>Submit your details to lock in immediate service dispatch priority.</p>
+                <form id="hero-schedule-form" action="https://formsubmit.co/cyed.jaffery@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://jafferysteps.github.io/jt-plumbing-landing/">
+                    <input type="hidden" name="_subject" value="New JT Plumbing Lead (Hero Form)">
+                    <div class="form-group">
+                        <label for="form-name">Full Name *</label>
+                        <input type="text" id="form-name" name="Client Name" required class="form-control" placeholder="John Doe">
                     </div>
-                    <p>Featuring a clean, local trust badge for "Monterey Bay" instantly grounds the user's trust, and displaying their physical Del Monte address validates legitimacy.</p>
-                </div>
-                <img src="assets/bathroom.png" alt="Bathroom Plumbing Services" class="hero-image-media">
-                <div class="hero-card">
-                    <div class="hero-card-header">
-                        <span class="status-indicator-live"></span> Dispatch Team Active
-                    </div>
-                    <div class="hero-card-body">
-                        <div class="card-item">
-                            <i class="fa-solid fa-circle-exclamation"></i>
-                            <div>
-                                <h4>Need Fast Repair?</h4>
-                                <p>Local Marina dispatchers are ready to take your call.</p>
-                            </div>
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="form-phone">Phone *</label>
+                            <input type="tel" id="form-phone" name="Client Phone" required class="form-control" placeholder="(831) 555-0199">
                         </div>
+                        <div class="form-group">
+                            <label for="form-zip">Zip Code *</label>
+                            <input type="text" id="form-zip" name="Client Zip Code" required class="form-control" placeholder="93933">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-service">Required Service *</label>
+                        <select id="form-service" name="Service Requested" required class="form-control">
+                            <option value="">-- Select Service Category --</option>
+                            <option value="plumbing">Plumbing / Drain Snaking</option>
+                            <option value="waterheater">Water Heater Repair/Install</option>
+                            <option value="heating">Heating system Diagnostics</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-secondary btn-block">Book Appointment Priority</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantees Section -->
+    <section class="coupons-section" id="guarantees">
+        <div class="container">
+            <div class="section-title-wrapper text-center">
+                <h2>Our Guarantees & Trust Protection</h2>
+                <p>We stand behind our plumbing and heating services with premium protection plans.</p>
+            </div>
+
+            <div class="coupons-grid">
+                <!-- Card 1 -->
+                <div class="coupon-card">
+                    <div class="coupon-inner">
+                        <div class="coupon-header">
+                            <span class="discount-value" style="font-size: 1.8rem; color: var(--accent-orange);"><i class="fa-solid fa-shield-halved"></i> Service Guarantee</span>
+                        </div>
+                        <h3>100% Satisfaction</h3>
+                        <p>If you are not completely satisfied with our service, we will resolve the issue to your standards or refund your investment.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="coupon-card coupon-highlight">
+                    <div class="coupon-inner">
+                        <div class="coupon-header">
+                            <span class="discount-value" style="font-size: 1.8rem; color: var(--accent-orange);"><i class="fa-solid fa-award"></i> 1-Year Warranty</span>
+                        </div>
+                        <h3>Workmanship Covered</h3>
+                        <p>All plumbing, water heater, and heating repairs are backed by a full 1-year warranty on materials and workmanship.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="coupon-card">
+                    <div class="coupon-inner">
+                        <div class="coupon-header">
+                            <span class="discount-value" style="font-size: 1.8rem; color: var(--accent-orange);"><i class="fa-solid fa-file-invoice-dollar"></i> Upfront Pricing</span>
+                        </div>
+                        <h3>No Hidden Surcharges</h3>
+                        <p>We diagnose your problem and provide a transparent, upfront pricing quote before any repair work begins.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Plumber Cost Estimator Widget -->
-    <section id="estimator" class="estimator-section">
+    <!-- 3-Step Service Process Section -->
+    <section class="process-section" style="padding: 60px 0; background-color: white;">
         <div class="container">
-            <div class="section-title-wrapper text-center">
-                <span class="sub-title">Interactive Tool</span>
-                <h2>Get a Quick Budget Estimate</h2>
-                <p class="section-desc">Select your issue below for a standard diagnostic cost estimate.</p>
+            <div class="section-title-wrapper text-center" style="margin-bottom: 40px;">
+                <h2>Our 3-Step Service Process</h2>
+                <p>Getting your home comfort systems fixed is fast and straightforward.</p>
             </div>
-
-            <div class="estimator-card">
-                <div class="pitch-tooltip estimator-pitch-tooltip" data-pitch-only="true">
-                    <div class="pitch-tooltip-header">
-                        <i class="fa-solid fa-circle-info"></i> Why this works
-                    </div>
-                    <p>People looking for plumbers online want an immediate price check. Offering an interactive estimator prevents them from hitting 'back' to search other competitors.</p>
+            <div class="coupons-grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                <div class="service-card" style="border-bottom: 4px solid var(--accent-orange); text-align: center;">
+                    <div class="service-icon-circle" style="background-color: var(--accent-orange); margin: 0 auto 20px;"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h3>1. Request Service</h3>
+                    <p>Submit your details online using our estimator or call our 24/7 priority booking line.</p>
                 </div>
-
-                <div class="estimator-grid">
-                    <div class="estimator-controls">
-                        <h3>1. Select Category</h3>
-                        <div class="category-buttons">
-                            <button class="cat-btn active" data-category="plumbing"><i class="fa-solid fa-faucet"></i> Plumbing repairs</button>
-                            <button class="cat-btn" data-category="heating"><i class="fa-solid fa-fire"></i> Heating Tune-ups</button>
-                        </div>
-
-                        <div class="service-details-picker">
-                            <h3>2. Select Specific Job</h3>
-                            <select id="job-selector" class="form-control">
-                                <!-- Options will be loaded dynamically by JS -->
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="estimator-result">
-                        <div class="result-box">
-                            <span class="result-label">Estimated Range</span>
-                            <div class="price-range" id="price-range-display">$150 - $250</div>
-                            <p class="price-disclaimer">*Estimates based on standard diagnostic rates.</p>
-                            
-                            <hr class="result-hr">
-
-                            <div class="lead-capture-form">
-                                <h4>Book Work or Get Exact Quote</h4>
-                                <form id="estimator-lead-form">
-                                    <div class="form-group-row">
-                                        <input type="text" id="lead-name" placeholder="Your Name" required class="form-control">
-                                        <input type="tel" id="lead-phone" placeholder="Phone" required class="form-control">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-block">Submit Booking Request</button>
-                                </form>
-                                <div id="lead-success-msg" class="success-alert hidden">
-                                    <i class="fa-solid fa-circle-check"></i> Request received! We will call you shortly.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="service-card" style="border-bottom: 4px solid var(--primary-blue); text-align: center;">
+                    <div class="service-icon-circle" style="background-color: var(--primary-blue); margin: 0 auto 20px;"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>2. Professional Dispatch</h3>
+                    <p>A licensed, background-checked technician is sent to your home in a fully stocked truck.</p>
+                </div>
+                <div class="service-card" style="border-bottom: 4px solid var(--accent-orange); text-align: center;">
+                    <div class="service-icon-circle" style="background-color: var(--accent-orange); margin: 0 auto 20px;"><i class="fa-solid fa-house-chimney-user"></i></div>
+                    <h3>3. Diagnostics & Repair</h3>
+                    <p>We diagnose the issue, provide upfront transparent pricing, and fix it on the spot.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section id="services" class="services-section">
+    <!-- Core Services Grid -->
+    <section class="services-section" id="services">
         <div class="container">
             <div class="section-title-wrapper text-center">
-                <span class="sub-title">Expert Plumbing & Heating Solutions</span>
                 <h2>Our Premium Services</h2>
+                <p>Highly qualified, state-licensed experts available for diagnostics and installation calls.</p>
             </div>
 
             <div class="services-grid">
                 <!-- Service 1 -->
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-wrench"></i></div>
-                    <h3>General Plumbing Repairs</h3>
+                    <div class="service-card-header">
+                        <div class="service-icon-circle"><i class="fa-solid fa-wrench"></i></div>
+                        <h3>General Plumbing Repairs</h3>
+                    </div>
                     <p>Fixing leaks, replacing fixtures, unclogging toilets, and restoring proper water flow in kitchens and bathrooms.</p>
+                    <ul class="srv-points">
+                        <li><i class="fa-solid fa-check"></i> Leak Detection</li>
+                        <li><i class="fa-solid fa-check"></i> Fixture Installs</li>
+                        <li><i class="fa-solid fa-check"></i> Drain Snaking</li>
+                    </ul>
                 </div>
                 <!-- Service 2 -->
-                <div class="service-icon-box service-card">
-                    <div class="service-icon"><i class="fa-solid fa-fire"></i></div>
-                    <h3>Heating System Maintenance</h3>
-                    <p>Professional heating diagnostics, furnace repair, heating tune-ups, and energy-efficient system replacements.</p>
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <div class="service-icon-circle"><i class="fa-solid fa-fire"></i></div>
+                        <h3>Heating Maintenance</h3>
+                    </div>
+                    <p>Professional heating diagnostics, furnace repairs, heating tune-ups, and energy-efficient system replacements.</p>
+                    <ul class="srv-points">
+                        <li><i class="fa-solid fa-check"></i> Furnace Repairs</li>
+                        <li><i class="fa-solid fa-check"></i> Safety Tune-ups</li>
+                        <li><i class="fa-solid fa-check"></i> Diagnostics</li>
+                    </ul>
                 </div>
                 <!-- Service 3 -->
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
-                    <h3>Water Heaters</h3>
-                    <p>Expert diagnostics, element repairs, and new energy-saving water heater installations.</p>
+                    <div class="service-card-header">
+                        <div class="service-icon-circle"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+                        <h3>Water Heaters</h3>
+                    </div>
+                    <p>Expert diagnostics, heating element repairs, tank flushes, and new energy-saving water heater installations.</p>
+                    <ul class="srv-points">
+                        <li><i class="fa-solid fa-check"></i> Bradford White Installs</li>
+                        <li><i class="fa-solid fa-check"></i> Element Replacement</li>
+                        <li><i class="fa-solid fa-check"></i> Tankless Upgrades</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estimate Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <div class="section-title-wrapper text-center">
+                <h2>Get an Instant Service Estimate</h2>
+                <p>Select the baseline services you need to estimate your diagnostics and repair range.</p>
+            </div>
+
+            <div class="calculator-card">
+                <div class="calc-grid">
+                    <div class="calc-options">
+                        <h3>1. Select Services Needed</h3>
+                        
+                        <div class="calc-block">
+                            <label class="calc-dropdown-label" for="calc-hvac"><i class="fa-solid fa-snowflake"></i> Heating & Furnace</label>
+                            <select id="calc-hvac" name="Heating Estimate Choice" class="form-control calc-select-field">
+                                <option value="0" data-name="No Heating Service Selected">-- Select Heating Service --</option>
+                                <option value="120" data-name="Furnace Safety Check">Furnace Safety Tune-Up ($120)</option>
+                                <option value="149" data-name="Heating System Diagnostic">Heating System Diagnostic ($149)</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-block">
+                            <label class="calc-dropdown-label" for="calc-plumbing"><i class="fa-solid fa-faucet"></i> Plumbing & Drain</label>
+                            <select id="calc-plumbing" name="Plumbing Estimate Choice" class="form-control calc-select-field">
+                                <option value="0" data-name="No Plumbing Service Selected">-- Select Plumbing Service --</option>
+                                <option value="175" data-name="Drain Snaking Service">Drain Snaking Service ($175)</option>
+                                <option value="150" data-name="Standard Water Heater Flush">Water Heater Diagnostics ($150)</option>
+                                <option value="250" data-name="Slab Leak Detection">Slab Leak Detection ($250)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="calc-summary">
+                        <div class="summary-box">
+                            <h4>Estimated baseline</h4>
+                            <div class="price-val">$<span id="calc-total">0</span></div>
+                            <p class="summary-disclaimer">*Standard diagnostic rates only. Parts and custom repairs determined on site.</p>
+                            
+                            <h5>Selected Items:</h5>
+                            <ul id="calc-selected-list" class="summary-list">
+                                <li class="empty-msg">No services selected</li>
+                            </ul>
+                            
+                            <hr class="calc-hr">
+                            
+                            <div class="calc-lead-form">
+                                <h5>Lock In Estimate & Book</h5>
+                                <form id="calc-booking-form" action="https://formsubmit.co/cyed.jaffery@gmail.com" method="POST">
+                                    <input type="hidden" name="_next" value="https://jafferysteps.github.io/jt-plumbing-landing/">
+                                    <input type="hidden" name="_subject" value="New JT Plumbing Lead (Calculator Form)">
+                                    <input type="hidden" name="Selected Services" id="calc-selected-hidden" value="None">
+                                    <div class="form-group">
+                                        <input type="text" id="calc-name" name="Lead Name" placeholder="Your Name" required class="form-control calc-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" id="calc-phone" name="Lead Phone" placeholder="Phone Number" required class="form-control calc-input">
+                                    </div>
+                                    <button type="submit" class="btn btn-prominent btn-block">Lock Estimate & Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,69 +339,26 @@
                 
                 <div class="trust-pill-list">
                     <div class="trust-pill-new" style="margin-bottom: 20px;">
-                        <h4 style="display: flex; align-items: center; gap: 8px; font-size: 1.15rem; color: var(--dark-bg); margin-bottom: 6px;"><i class="fa-solid fa-user-shield" style="color: var(--primary-color); font-size: 1.25rem;"></i> Licensed & Compliant</h4>
-                        <p style="margin-left: 28px; font-size: 0.9rem; color: var(--text-secondary);">Fully licensed contractors ensuring safe installations.</p>
+                        <h4 style="display: flex; align-items: center; gap: 8px; font-size: 1.15rem; color: var(--primary-blue); margin-bottom: 6px;"><i class="fa-solid fa-user-shield" style="color: var(--accent-orange); font-size: 1.25rem;"></i> Licensed & Compliant</h4>
+                        <p style="margin-left: 28px; font-size: 0.9rem; color: var(--text-muted);">Fully licensed contractors ensuring safe installations.</p>
                     </div>
                     <div class="trust-pill-new" style="margin-bottom: 20px;">
-                        <h4 style="display: flex; align-items: center; gap: 8px; font-size: 1.15rem; color: var(--dark-bg); margin-bottom: 6px;"><i class="fa-solid fa-thumbs-up" style="color: var(--primary-color); font-size: 1.25rem;"></i> Top Customer Satisfaction</h4>
-                        <p style="margin-left: 28px; font-size: 0.9rem; color: var(--text-secondary);">Reliable communication, direct updates, and clean work spaces.</p>
+                        <h4 style="display: flex; align-items: center; gap: 8px; font-size: 1.15rem; color: var(--primary-blue); margin-bottom: 6px;"><i class="fa-solid fa-thumbs-up" style="color: var(--accent-orange); font-size: 1.25rem;"></i> Top Customer Satisfaction</h4>
+                        <p style="margin-left: 28px; font-size: 0.9rem; color: var(--text-muted);">Reliable communication, direct updates, and clean work spaces.</p>
                     </div>
                 </div>
             </div>
             
             <div class="why-us-graphics">
-                <div class="pitch-tooltip why-pitch-tooltip" data-pitch-only="true">
-                    <div class="pitch-tooltip-header">
-                        <i class="fa-solid fa-circle-info"></i> Direct Trust Graphics
+                <div class="stat-container">
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-lbl">Satisfaction Guarantee</span>
                     </div>
-                    <p>Replacing generic stock photos with premium minimalist line-art and badges maintains the high-end appeal of the site on mobile viewports.</p>
-                </div>
-                <img src="assets/plumber.png" alt="Licensed Plumber Illustration" class="why-us-media">
-                <div class="stat-box-container">
-                    <div class="stat-box">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Code Compliant</span>
+                    <div class="stat-item">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-lbl">Emergency Response</span>
                     </div>
-                    <div class="stat-box">
-                        <span class="stat-number">Thousands</span>
-                        <span class="stat-label">Of Happy Clients</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section id="reviews" class="reviews-section">
-        <div class="container">
-            <div class="section-title-wrapper text-center">
-                <span class="sub-title">Testimonials</span>
-                <h2>What Local Clients Say</h2>
-            </div>
-
-            <div class="reviews-carousel-wrapper">
-                <div class="reviews-carousel" id="reviews-carousel">
-                    <div class="review-card active">
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        <p class="review-text">"JT Plumbing replaced our hot water heater. Extremely fast response time, clean work, and very professional team. Highly recommend!"</p>
-                        <div class="reviewer-meta">
-                            <span class="reviewer-name">Carlos R.</span>
-                            <span class="reviewer-loc">Marina, CA</span>
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        <p class="review-text">"Reliable heating tune-up before winter. Jafet took the time to explain everything clearly and did a thorough safety check. Superb service!"</p>
-                        <div class="reviewer-meta">
-                            <span class="reviewer-name">Linda K.</span>
-                            <span class="reviewer-loc">Monterey, CA</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-dots" id="carousel-dots">
-                    <span class="dot active" data-index="0"></span>
-                    <span class="dot" data-index="1"></span>
                 </div>
             </div>
         </div>
@@ -297,26 +368,34 @@
     <footer class="main-footer">
         <div class="container footer-grid">
             <div>
-                <h3>JT Plumbing & Heating Inc.</h3>
-                <p>Licensed plumbing and heating contractors serving Marina, CA and surrounding Monterey Bay communities.</p>
+                <h3>JT Plumbing Marina</h3>
+                <p style="margin-bottom: 15px;">Your trusted local HVAC, plumbing, and heating service provider since 1996.</p>
+                <div class="footer-socials">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
             </div>
             <div>
-                <h4>Contact Details</h4>
+                <h4>Contact Us</h4>
                 <p>3016 Del Monte Blvd, Marina, CA 93933</p>
-                <p>Office: (831) 632-0139</p>
+                <p>Emergency Line: (831) 632-0139</p>
                 <p>Email: jtplumbing@yahoo.com</p>
             </div>
             <div>
-                <h4>Hours</h4>
-                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                <h4>Our Services</h4>
+                <p>General Plumbing & Drain snaking</p>
+                <p>Water Heater Installation</p>
+                <p>Furnace Diagnostics & Tune-ups</p>
             </div>
         </div>
         <div class="footer-bottom text-center">
-            <p>&copy; 2026 JT Plumbing & Heating Inc. All rights reserved.</p>
+            <p>&copy; 2026 JT Plumbing. All rights reserved. Marina, California.</p>
         </div>
     </footer>
 
-    <!-- Custom Script -->
+    <!-- Interactive Script -->
     <script src="index.js"></script>
 </body>
 </html>
